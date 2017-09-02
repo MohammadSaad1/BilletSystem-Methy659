@@ -10,7 +10,7 @@ namespace BilletLib.Model
     {
         string Nummerplade { get; set; }
         DateTime Dato { get; set; }
-        
+        bool BroBizz { get; set; }
         int Pris();
         string Køretøj();
     }

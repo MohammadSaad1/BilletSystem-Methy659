@@ -10,9 +10,14 @@ namespace BilletLib.Model
     {
         public string Nummerplade { get; set; }
         public DateTime Dato { get; set; }
+        public bool BroBizz { get; set; }
         public int Pris()
         {
             int fastRetur = 125;
+            if (BroBizz == true)
+            {
+                fastRetur = (int)((fastRetur / 1.05));
+            }
             return fastRetur;
         }
 

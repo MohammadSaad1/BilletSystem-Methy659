@@ -65,5 +65,88 @@ namespace Test
             Assert.AreEqual("Motercykel", køretøj);
         }
 
+        [TestMethod]
+        public void BroBizzBilTest()
+        {
+            var bil = new Bil();
+            bil.BroBizz = true;   
+            int pris = bil.Pris();
+            Assert.AreEqual(228, pris);
+        }
+
+        [TestMethod]
+        public void BroBizzBilTest2()
+        {
+            var bil = new Bil();
+            bil.BroBizz = false;
+            int pris = bil.Pris();
+            Assert.AreEqual(240, pris);
+        }
+        [TestMethod]
+        public void BroBizzPlusWeekendBilTestSaturday()
+        {
+            var bil = new Bil();
+            bil.BroBizz = true;
+            bil.Dato = new DateTime(2017,09,02);
+            int pris = bil.Pris();
+            Assert.AreEqual(190, pris);
+        }
+        [TestMethod]
+        public void BroBizzPlusWeekendBilTestSunday()
+        {
+            var bil = new Bil();
+            bil.BroBizz = true;
+            bil.Dato = new DateTime(2017, 09, 03);
+            int pris = bil.Pris();
+            Assert.AreEqual(190, pris);
+        }
+        [TestMethod]
+        public void WeekendBilTestSunday()
+        {
+            var bil = new Bil();
+            bil.BroBizz = false;
+            bil.Dato = new DateTime(2017, 09, 03);
+            int pris = bil.Pris();
+            Assert.AreEqual(200, pris);
+        }
+
+        [TestMethod]
+        public void BroBizzPlusWeekendBilTestMandag()
+        {
+            var bil = new Bil();
+            bil.BroBizz = true;
+            bil.Dato = new DateTime(2017, 09, 04);
+            int pris = bil.Pris();
+            Assert.AreEqual(228, pris);
+        }
+
+        public void BroBizzPlusWeekendBilTest2()
+        {
+            var bil = new Bil();
+            bil.BroBizz = false;
+            bil.Dato = new DateTime(02/09/2017);
+            int pris = bil.Pris();
+            Assert.AreEqual(200, pris);
+        }
+
+
+
+
+        [TestMethod]
+        public void BroBizzMCTest()
+        {
+            var mC = new MC();
+            mC.BroBizz = true;
+            int pris = mC.Pris();
+            Assert.AreEqual(119, pris);
+        }
+        [TestMethod]
+        public void BroBizzMCTest2()
+        {
+            var mC = new MC();
+            mC.BroBizz = false;
+            int pris = mC.Pris();
+            Assert.AreEqual(125, pris);
+        }
     }
 }
