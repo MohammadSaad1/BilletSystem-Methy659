@@ -26,6 +26,29 @@ namespace Test
             //assert
             Assert.AreEqual(240, pris);
         }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void TestNummerpladeRestricterBil()
+        {
+            //act
+            var bil = new Bil();
+            bil.Nummerplade = "xdfsdgsdgfsdg";
+            bil.Restrict();
+
+            //assert
+            
+        }
+        [TestMethod]
+        public void TestNummerpladeRestricter2Bil()
+        {
+            //act
+            var bil = new Bil();
+            bil.Nummerplade = "ak47";
+            bil.Restrict();
+
+            //assert
+            Assert.AreEqual("ak47", bil.Nummerplade);
+        }
 
         [TestMethod]
         public void TestPrisMC()
@@ -41,5 +64,6 @@ namespace Test
             string køretøj = mC.Køretøj();
             Assert.AreEqual("Motercykel", køretøj);
         }
+
     }
 }
