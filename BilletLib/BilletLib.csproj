@@ -109,6 +109,8 @@
     <Compile Include="Model\Bil.cs" />
     <Compile Include="Model\IKøretøj.cs" />
     <Compile Include="Model\MC.cs" />
+    <Compile Include="Model\ØresundsBil.cs" />
+    <Compile Include="Model\ØresundsMC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\BilletLib.rd.xml" />
   </ItemGroup>
