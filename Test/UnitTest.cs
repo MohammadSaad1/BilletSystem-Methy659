@@ -148,5 +148,58 @@ namespace Test
             int pris = mC.Pris();
             Assert.AreEqual(125, pris);
         }
+
+
+
+        [TestMethod]
+        public void ØresundBilString()
+        {
+            var øresundBil = new ØresundsBil();
+            string køretøj = øresundBil.Køretøj();
+            Assert.AreEqual("Øresund Bil", køretøj);
+        }
+
+        [TestMethod]
+        public void ØresundMCString()
+        {
+            var øresundMC = new ØresundsMC();
+            string køretøj = øresundMC.Køretøj();
+            Assert.AreEqual("Øresund MC", køretøj);
+        }
+
+        [TestMethod]
+        public void ØresundBilPris()
+        {
+            var øresundBil = new ØresundsBil();
+            int pris = øresundBil.Pris();
+            //assert
+            Assert.AreEqual(410, pris);
+        }
+        [TestMethod]
+        public void ØresundBilPrisMedBroBizz()
+        {
+            var øresundBil = new ØresundsBil();
+            øresundBil.BroBizz = true;
+            int pris = øresundBil.Pris();
+            //assert
+            Assert.AreEqual(161, pris);
+        }
+        [TestMethod]
+        public void ØresundMCPris()
+        {
+            var øresundMC = new ØresundsMC();
+            int pris = øresundMC.Pris();
+            //assert
+            Assert.AreEqual(210, pris);
+        }
+        [TestMethod]
+        public void ØresundMCPrisMedBroBizz()
+        {
+            var øresundMC = new ØresundsMC();
+            øresundMC.BroBizz = true;
+            int pris = øresundMC.Pris();
+            //assert
+            Assert.AreEqual(73, pris);
+        }
     }
 }
