@@ -51,14 +51,14 @@ namespace Test
         }
 
         [TestMethod]
-        public void TestPrisMC()
+        public void TestPrisMc()
         {
             var mC = new MC();
             int pris = mC.Pris();
             Assert.AreEqual(125, pris);
         }
         [TestMethod]
-        public void TestStringMC()
+        public void TestStringMc()
         {
             var mC = new MC();
             string køretøj = mC.Køretøj();
@@ -133,7 +133,7 @@ namespace Test
 
 
         [TestMethod]
-        public void BroBizzMCTest()
+        public void BroBizzMcTest()
         {
             var mC = new MC();
             mC.BroBizz = true;
@@ -141,7 +141,7 @@ namespace Test
             Assert.AreEqual(119, pris);
         }
         [TestMethod]
-        public void BroBizzMCTest2()
+        public void BroBizzMcTest2()
         {
             var mC = new MC();
             mC.BroBizz = false;
