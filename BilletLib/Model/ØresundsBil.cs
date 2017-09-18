@@ -8,6 +8,7 @@ namespace BilletLib.Model
 {
     public class ØresundsBil : IKøretøj
     {
+        //
         public string Nummerplade { get; set; }
         public DateTime Dato { get; set; }
         public bool BroBizz { get; set; }
